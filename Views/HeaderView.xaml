@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="VendoreMachine.Views.HeaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VendoreMachine.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="E-Corp Vending Machine" FontSize="30" Margin="30 10" Grid.Row="0"/>
+        <StackPanel Margin="30 10" Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+            <TextBlock Text="{Binding FirstName}" FontSize="25"  />
+            <TextBlock Text="{Binding LastName}" FontSize="25"  />
+            <Image Source="pack://application:,,,/Resources/ccount.png" Width="50" Height="50" />
+        </StackPanel>
+        <Separator Margin="20 10" Grid.Row="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</UserControl>
